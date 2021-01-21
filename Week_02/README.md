@@ -37,5 +37,15 @@ Full GC
 ## G1（Garbage First）
 * 与 CMS 类似
 
+
+## 总结
+* 先说，堆内存设置在 4G 条件下，并行 GC 和 CMS 从日志中看，性能相当，在 这种场景下，并行 GC，性能略优
+* 在上述条件下，G1 GC 拥有较低的延迟，相对的垃圾回收测试会变多。
+* 在堆内存设置在 512M 条件下，并行 GC 比 串行 GC 垃圾收集频率高，延迟小。
+* 上述条件下，CMS 比 并行 GC 发生 full GC 的频率少，并且延迟小。
+* 上述条件下，G1 GC 比 CMS 收集操作更加频繁，见 g1.tmp gc 工作有 175 条之多，而 CMS 仅有 75 条
+* 使用压力测试工具，测试 gateway 服务，Screen Shot 2021-01-21 at 11.43.42 AM.png 图片现实，对内存有较大的抖动，GC 在此期间，频繁的进行清理工作。gateway.log.homework 文件也现实，GC 在压测期间，频繁清理年轻代对象
+
 # Lesson 04 必做题
 1. 写一段代码，使用 HttpClient 或 OkHttp 访问 http://localhost:8801
+* OkhttpExample 是必做题作业
