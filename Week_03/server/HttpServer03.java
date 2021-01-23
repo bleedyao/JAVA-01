@@ -1,15 +1,20 @@
+package server;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class HttpServer01 {
+public class HttpServer03 {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8081);
+        ExecutorService executorService = Executors.newFixedThreadPool(40);
+        ServerSocket serverSocket = new ServerSocket(8083);
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
-                service(socket);
+                executorService.execute(() -> service(socket));
             } catch (IOException e) {
                 e.printStackTrace();
             }

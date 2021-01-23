@@ -1,17 +1,17 @@
+package server;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer02 {
+public class HttpServer01 {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(8082);
+        ServerSocket serverSocket = new ServerSocket(8081);
         while (true) {
             try {
                 Socket socket = serverSocket.accept();
-                new Thread(() -> {
-                    service(socket);
-                }).start();
+                service(socket);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -24,7 +24,7 @@ public class HttpServer02 {
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
             printWriter.println("HTTP/1.1 200 OK");
             printWriter.println("Content-Type:text/html;charset=utf-8");
-            String body = "hello, nio";
+            String body = "hello, nio1";
             printWriter.println("Content-Language: " + body.getBytes().length);
             printWriter.println("");
             printWriter.write(body);
