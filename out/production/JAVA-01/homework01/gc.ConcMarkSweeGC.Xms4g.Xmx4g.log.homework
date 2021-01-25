@@ -1,0 +1,17 @@
+Java HotSpot(TM) 64-Bit Server VM (25.261-b12) for bsd-amd64 JRE (1.8.0_261-b12), built on Jun 18 2020 06:38:55 by "java_re" with gcc 4.2.1 Compatible Apple LLVM 10.0.0 (clang-1000.11.45.5)
+Memory: 4k page, physical 16777216k(1588984k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MaxNewSize=872415232 -XX:MaxTenuringThreshold=6 -XX:NewSize=872415232 -XX:OldPLABSize=16 -XX:OldSize=1744830464 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2021-01-19T10:14:28.556-0800: 0.641: [GC (Allocation Failure) 2021-01-19T10:14:28.556-0800: 0.641: [ParNew: 681600K->85184K(766784K), 0.0616805 secs] 681600K->178465K(4109120K), 0.0617840 secs] [Times: user=0.11 sys=0.36, real=0.06 secs] 
+2021-01-19T10:14:28.751-0800: 0.835: [GC (Allocation Failure) 2021-01-19T10:14:28.751-0800: 0.835: [ParNew: 766784K->85182K(766784K), 0.0851480 secs] 860065K->321503K(4109120K), 0.0852436 secs] [Times: user=0.18 sys=0.48, real=0.08 secs] 
+2021-01-19T10:14:28.989-0800: 1.074: [GC (Allocation Failure) 2021-01-19T10:14:28.989-0800: 1.074: [ParNew: 766782K->85184K(766784K), 0.1798159 secs] 1003103K->455155K(4109120K), 0.1801284 secs] [Times: user=1.10 sys=0.09, real=0.18 secs] 
+Heap
+ par new generation   total 766784K, used 112387K [0x00000006c0000000, 0x00000006f4000000, 0x00000006f4000000)
+  eden space 681600K,   3% used [0x00000006c0000000, 0x00000006c1a90e30, 0x00000006e99a0000)
+  from space 85184K, 100% used [0x00000006eecd0000, 0x00000006f4000000, 0x00000006f4000000)
+  to   space 85184K,   0% used [0x00000006e99a0000, 0x00000006e99a0000, 0x00000006eecd0000)
+ concurrent mark-sweep generation total 3342336K, used 369971K [0x00000006f4000000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 3245K, capacity 4500K, committed 4864K, reserved 1056768K
+  class space    used 359K, capacity 388K, committed 512K, reserved 1048576K

@@ -1,6 +1,6 @@
 package server.netty;
 
-import gateway.Gateway1_0;
+import gateway.Gateway;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -16,6 +16,6 @@ public class HttpInitializer extends ChannelInitializer<SocketChannel> {
 		//p.addLast(new HttpServerExpectContinueHandler());
 		p.addLast(new HttpObjectAggregator(1024 * 1024));
 //		p.addLast(new HttpHandler());
-		p.addLast(new Gateway1_0());
+		p.addLast(new Gateway());
 	}
 }
