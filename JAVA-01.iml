@@ -23,5 +23,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="io.netty:netty-all:4.1.13.Final" level="project" />
     <orderEntry type="library" name="com.squareup.okhttp3:okhttp:3.3.0" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
