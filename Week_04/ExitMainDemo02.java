@@ -8,6 +8,6 @@ public class ExitMainDemo02 {
         Thread thread = new Thread(ar);
         thread.start();
         thread.join();
-        System.out.println("Main Thread is exit");
+        System.out.println("Main Thread is exited");
     }
 }

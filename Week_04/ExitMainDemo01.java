@@ -9,6 +9,6 @@ public class ExitMainDemo01 {
         synchronized (ar) {
             ar.wait();
         }
-        System.out.println("Main Thread is exit");
+        System.out.println("Main Thread is exited");
     }
 }

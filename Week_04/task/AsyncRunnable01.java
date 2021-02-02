@@ -10,7 +10,7 @@ public class AsyncRunnable01 implements Runnable {
     @Override
     public void run() {
         if (listener != null) {
-            listener.onListener(fibo(45));
+            listener.onListener(fibo(30));
             synchronized (this) {
                 this.notify();
             }

@@ -8,12 +8,12 @@ public class AsyncRunnable02 implements Runnable{
     @Override
     public void run() {
         if (listener != null) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            listener.onListener(1);
+            listener.onListener(fibo(30));
         }
+    }
+    private int fibo(int a) {
+        if ( a < 2)
+            return 1;
+        return fibo(a-1) + fibo(a-2);
     }
 }
