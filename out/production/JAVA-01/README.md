@@ -3,3 +3,4 @@
 * ExitMainDemo01 使用 wait 和 notify
 * ExitMainDemo02 使用 join
 * ExitMainDemo03 使用 Lock 和 condition
+* ExitMainDemo04 使用 Executor#submit

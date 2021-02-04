@@ -8,6 +8,7 @@ public class ExitMainDemo04 {
         ExecutorService pool = Executors.newSingleThreadExecutor();
         Future<Integer> submit = pool.submit(() -> fibo(30));
         System.out.println("main result: " + submit.get());
+        pool.shutdownNow();
         System.out.println("Main Thread is exited");
     }
 
