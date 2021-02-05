@@ -4,3 +4,14 @@
 * ExitMainDemo02 使用 join
 * ExitMainDemo03 使用 Lock 和 condition
 * ExitMainDemo04 使用 Executor#submit
+
+## 计划使用
+* CountDownLatch
+* CyclicBarrier
+* Phaser
+* Exchanger
+* LockSupport.park()
+* PipedInputStream
+* BlockingQueue
+* Semaphore
+* ThreadLocal
