@@ -12,6 +12,3 @@
 * ExitMainDemo10 使用 BlockingQueue
 * ExitMainDemo11 使用 Semaphore
 
-## 计划使用
-* PipedInputStream
-* ThreadLocal
