@@ -1,16 +1,22 @@
 package task;
 
-public class AsyncRunnable02 implements Runnable{
+public class AsyncRunnable01 implements Runnable {
     private Listener listener = null;
-    public AsyncRunnable02(Listener listener) {
+
+    public AsyncRunnable01(Listener listener) {
         this.listener = listener;
     }
+
     @Override
     public void run() {
         if (listener != null) {
             listener.onListener(fibo(30));
+            synchronized (this) {
+                this.notify();
+            }
         }
     }
+
     private int fibo(int a) {
         if ( a < 2)
             return 1;
