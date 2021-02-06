@@ -3,15 +3,12 @@
 * ExitMainDemo01 使用 wait 和 notify
 * ExitMainDemo02 使用 join
 * ExitMainDemo03 使用 Lock 和 condition
-* ExitMainDemo04 使用 Executor#submit
+* ExitMainDemo04 使用 Executor#submit 
+* ExitMainDemo05 使用 CountDownLatch
+* ExitMainDemo06 使用 CyclicBarrier
+* ExitMainDemo07 使用 Phaser
+* ExitMainDemo08 使用 Exchanger
+* ExitMainDemo09 使用 LockSupport.park()
+* ExitMainDemo10 使用 BlockingQueue
+* ExitMainDemo11 使用 Semaphore
 
-## 计划使用
-* CountDownLatch
-* CyclicBarrier
-* Phaser
-* Exchanger
-* LockSupport.park()
-* PipedInputStream
-* BlockingQueue
-* Semaphore
-* ThreadLocal
