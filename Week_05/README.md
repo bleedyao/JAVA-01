@@ -5,5 +5,5 @@
 # lesson10
 * 自动装配必做题没有完成
 
-# jdbd
+# jdbc
 * 完成原生 jdbc
