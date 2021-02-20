@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+                        http://www.springframework.org/schema/aop
+                        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="Student100" class="com.bleedyao.Student">
+        <property name="name" value="Zhang San"/>
+        <property name="age" value="23"/>
+    </bean>
+
+    <bean id="Computer001" class="com.bleedyao.Computer">
+        <property name="id" value="001"/>
+        <property name="brand" value="bell"/>
+    </bean>
+
+    <!--    <bean id="Computer002" class="com.bleedyao.Computer">-->
+    <!--        <property name="id" value="002"/>-->
+    <!--        <property name="brand" value="bell"/>-->
+    <!--    </bean>-->
+
+    <bean id="School01" class="com.bleedyao.School">
+        <property name="list">
+            <list>
+                <ref bean="Student100"/>
+                <bean id="Student101" class="com.bleedyao.Student">
+                    <property name="name" value="Li Si"/>
+                    <property name="age" value="25"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="aop2" class="com.bleedyao.Aop2"/>
+    <aop:aspectj-autoproxy  />
+
+    <bean id="aop" class="com.bleedyao.Aop"/>
+    <aop:config>
+        <aop:pointcut id="p1" expression="execution(* com.bleedyao.ISchool.*(..))"/> <!--切点-->
+        <aop:aspect ref="aop"> <!--切面-->
+            <aop:around method="around" pointcut-ref="p1"/>
+            <aop:before method="startTransaction" pointcut-ref="p1"/>
+            <aop:after-returning method="commitTransaction" pointcut-ref="p1"/>
+        </aop:aspect>
+    </aop:config>
+
+
+</beans>
