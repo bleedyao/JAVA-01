@@ -2,7 +2,7 @@ import java.sql.*;
 import java.util.List;
 
 public class NativeDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // 查询
         query();
         // 插入
